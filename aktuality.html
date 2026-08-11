@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aktuality a workshopy | Paulína Mináriková</title>
+<meta name="description" content="Aktuálne plánované workshopy, ranné cvičenia a skupinové lekcie. Sledujte kalendár podujatí Paulíny Minárikovej.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Paulína <span>Mináriková</span></a>
+    <button class="nav-toggle" aria-label="Otvoriť menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Domov</a></li>
+      <li><a href="o-mne.html">O mne</a></li>
+      <li><a href="ponuka.html">Ponuka</a></li>
+      <li><a href="aktuality.html" aria-current="page">Aktuality</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="kontakt.html" class="btn btn-primary">Objednať sa</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section style="padding-bottom:0;">
+    <div class="container">
+      <div class="hero-eyebrow">Aktuality</div>
+      <h1>Pripravované podujatia</h1>
+      <p style="max-width:640px;font-size:1.1rem;">Workshopy, ranné cvičenia a skupinové lekcie. Nové termíny pridávam priebežne – ak práve žiadne nevidíte, sledujte aj Instagram <a href="https://www.instagram.com/somtudobre/" target="_blank" rel="noopener" style="color:var(--color-sage-dark);font-weight:600;">@somtudobre</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <div id="upcoming-events" class="events-grid"></div>
+      <p id="no-events-msg" class="empty-msg">Momentálne nie sú naplánované žiadne nové podujatia. Sledujte túto stránku alebo Instagram <a href="https://www.instagram.com/somtudobre/" target="_blank" rel="noopener">@somtudobre</a> – čoskoro pribudnú nové termíny.</p>
+
+      <details id="past-events-section" class="past-section">
+        <summary>Archív minulých podujatí</summary>
+        <div id="past-events" class="events-grid"></div>
+      </details>
+
+    </div>
+  </section>
+</main>
+
+<!-- =====================================================================
+     ÚDAJE O PODUJATIACH
+     -----------------------------------------------------------------
+     Toto je JEDINÉ miesto, ktoré treba upravovať pri pridávaní alebo
+     mazaní podujatí. Stránka si sama zoradí podujatia podľa dátumu a
+     presunie tie, ktoré už prebehli, do "Archívu" nižšie – nemusíte
+     nič presúvať ručne.
+
+     AKO PRIDAŤ NOVÉ PODUJATIE:
+     1. Skopírujte celý blok od <!-- EVENT START --> po <!-- EVENT END -->
+     2. Vložte kópiu kdekoľvek medzi značky <div id="events-data"> a </div>
+     3. V skopírovanom bloku upravte:
+          - data-date="RRRR-MM-DD"   (napr. 2026-09-12)
+          - text v event-date        (napr. "12. september 2026")
+          - nadpis (h3) a popis (p)
+          - cenu (voliteľné)
+
+     AKO ODSTRÁNIŤ PODUJATIE:
+     Vymažte celý blok od <!-- EVENT START --> po <!-- EVENT END -->.
+
+     Podrobný návod s obrázkami nájdete v súbore NAVOD-AKTUALIZACIA.md
+     v hlavnom priečinku webu.
+===================================================================== -->
+<div id="events-data" style="display:none">
+
+  <!-- EVENT START -->
+  <div class="event-card" data-date="2026-08-20">
+    <div class="event-date">20. august 2026</div>
+    <h3 class="event-title">Workshop: Krčná chrbtica</h3>
+    <p class="event-desc">Praktický workshop zameraný na stuhnutosť krčnej chrbtice a bolesti hlavy súvisiace s napätím. Miesto: budova Archa, Pribinova 6, Martin.</p>
+    <span class="event-price">25 €</span>
+  </div>
+  <!-- EVENT END -->
+
+  <!-- EVENT START -->
+  <div class="event-card" data-date="2026-09-03">
+    <div class="event-date">3. september 2026</div>
+    <h3 class="event-title">Ranné cvičenia – nová séria</h3>
+    <p class="event-desc">Utorky, štvrtky a soboty od 7:00 do 8:00. Jóga, posilňovanie, rovnováha a koordinácia. Každé ôsme cvičenie zdarma.</p>
+    <span class="event-price">8 € / lekcia</span>
+  </div>
+  <!-- EVENT END -->
+
+  <!-- EVENT START -->
+  <div class="event-card" data-date="2026-07-16">
+    <div class="event-date">16. júl 2026</div>
+    <h3 class="event-title">Workshop: Krčná chrbtica</h3>
+    <p class="event-desc">Stuhnutosť, migrény a napätie v oblasti krku a ramien.</p>
+    <span class="event-price">25 €</span>
+  </div>
+  <!-- EVENT END -->
+
+  <!-- EVENT START -->
+  <div class="event-card" data-date="2026-07-23">
+    <div class="event-date">23. júl 2026</div>
+    <h3 class="event-title">Workshop: Driekova chrbtica</h3>
+    <p class="event-desc">Uvoľnenie napätia v drieku a práca so SI kĺbom.</p>
+    <span class="event-price">25 €</span>
+  </div>
+  <!-- EVENT END -->
+
+  <!-- EVENT START -->
+  <div class="event-card" data-date="2026-07-30">
+    <div class="event-date">30. júl 2026</div>
+    <h3 class="event-title">Workshop: Zdravie očí</h3>
+    <p class="event-desc">Cvičenia proti únave očí pri dlhodobej práci s obrazovkou.</p>
+    <span class="event-price">25 €</span>
+  </div>
+  <!-- EVENT END -->
+
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="brand">Paulína <span>Mináriková</span></a>
+      <p style="margin-top:10px;max-width:320px;">Fyzioterapia, pohybové poradenstvo a workshopy v Martine.</p>
+    </div>
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="o-mne.html">O mne</a>
+      <a href="ponuka.html">Ponuka</a>
+      <a href="aktuality.html">Aktuality</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div>
+      <p style="margin-bottom:4px;"><strong>Pribinova 6, Martin</strong> (budova Archa)</p>
+      <p style="margin-bottom:4px;">📞 <a href="tel:+421908248970">0908 248 970</a></p>
+      <p>✉️ <a href="mailto:premfyzio@gmail.com">premfyzio@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    © <span id="year"></span> Paulína Mináriková. Všetky práva vyhradené.
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
